@@ -27,9 +27,12 @@ source ~/.bashrc
 
 sleep 1
 
-`pip install --user --no-index -f http://mega/pip/ genshi`
-`pip install --user --no-index -f http://mega/pip/ six`
-`pip install --user --no-index -f http://mega/pip/ pyDatalog`
+pip install --user --no-index -f http://mega/pip/ genshi
+sleep 2
+pip install --user --no-index -f http://mega/pip/ six
+sleep 2
+pip install --user --no-index -f http://mega/pip/ pyDatalog
+sleep 2
 
 
 }
@@ -41,8 +44,8 @@ create_dir_inside ()
 mkdir -p ~/atp/$StudyName/input
 cd ~/atp/$StudyName/input
 # create the dagjobs.cfg file
-`touch dagjobs.cfg`
-`mkdir -p work`
+touch dagjobs.cfg
+mkdir -p work
 
 sleep 1
 
