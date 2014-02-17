@@ -1,0 +1,20 @@
+notification = Error 
+notify_user =  nislam@airsgae.com 
+Executable      = /opt/home/pde9_condor/test/countsub.py
+Arguments       = blockid.csv.gz out1
+Universe        = vanilla 
+Error           = optout_error.out
+Output          = optout_result.out 
+Log             = optout_log.out
+
+should_transfer_files = YES 
+when_to_transfer_output = ON_EXIT 
+transfer_input_files = /opt/home/pde9_condor/test/countsub.py,/mnt/glusterfs/hp/atp/Teledetroit/output/PrepareLegacyData/DET-DETROIT-MSC_2/20130601/blockid.csv.gz
+
+ 
+request_cpus = 23 
+request_disk = 52428800 
+Requirements = (asg_owner == "pde9_condor" || asg_owner == "free") 
+ 
+Queue 
+
