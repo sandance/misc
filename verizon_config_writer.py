@@ -103,6 +103,8 @@ def default_stuff(argv):
 	fp.write('--map_pickle\n'+'%s\n' % ask('map pickle file path'))
 	fp.write('--legacy_header\n'+'%s\n' % header('vzw'))
 	fp.write('--num_groups\n'+'%d\n' % num_groups)
+	fp.write('--hwmrun\n'+'zone=-f %d  %d -m zone\n'  % (int(start_date),int(end_date)))  
+	fp.write('--hwmrun\n'+'county=-f %d  %d -m county\n' % (int(start_date),int(end_date)))
 	question=ask('Points or Trips?\n')
 	if question=='Trips':
 		print "Nothing for now"

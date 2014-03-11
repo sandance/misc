@@ -1,0 +1,16 @@
+000 (371118.000.000) 02/17 10:29:47 Job submitted from host: <10.255.8.101:42255>
+...
+001 (371118.000.000) 02/17 10:33:12 Job executing on host: <10.255.8.119:35801>
+...
+007 (371118.000.000) 02/17 10:33:12 Shadow exception!
+	Error from slot1@sptchc119.spt.airsage.com: Failed to execute '/opt/condor/dir_8658/condor_exec.exe' with arguments CIN-SHARONVILLE-MSC_1_20130701.csv.gz: (errno=8: 'Exec format error')
+	0  -  Run Bytes Sent By Job
+	14397883392  -  Run Bytes Received By Job
+...
+012 (371118.000.000) 02/17 10:33:12 Job was held.
+	Error from slot1@sptchc119.spt.airsage.com: Failed to execute '/opt/condor/dir_8658/condor_exec.exe' with arguments CIN-SHARONVILLE-MSC_1_20130701.csv.gz: (errno=8: 'Exec format error')
+	Code 6 Subcode 8
+...
+009 (371118.000.000) 02/17 10:33:39 Job was aborted by the user.
+	via condor_rm (by user pde9_condor)
+...

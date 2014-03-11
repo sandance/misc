@@ -10,7 +10,7 @@ from time import strptime
 
 start_date=sys.argv[1]
 end_date=sys.argv[2]
-matrix=sys.argv[3]
+#matrix=sys.argv[3]
 # start dates
 start_year=int(start_date[0:4])
 start_month=int(start_date[4:6])
@@ -101,7 +101,7 @@ elif (matrix=='airsageHW'):
 """
 
 
-"""
+
 print "All Satday  are"
 for i in saDay:
         print i 
@@ -113,4 +113,4 @@ for i in suDay:
         print i 
 print "\n"
 
-"""
+
