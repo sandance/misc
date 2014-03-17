@@ -8,7 +8,7 @@ from subprocess import PIPE
 from subprocess import check_output as qx
 
 def header(version):
-	vzw_header='line,sub1,dialeddigits,longitude,latitude,d2t,uncert,method,event,epoch,type_code,pr_mid,pr_cid,pr_sid,pr_donor,route_id,sub2,dummy1,dummy2,dummy3,dummy4,dummy5,dummy6,dummy7,dummy8,dummy9,dummy10'
+	vzw_header='uid,tech,filename,line,sub1,sub2,dd,epoch,event,tcode,pilots,tt,cd,ot,pilot1,pilot2,pilot3,pilot4,pilot5,v_parser,kclass,serv_cid,sub_cid,optout,longitude,latitude,d2t,uncert,method,type_code,pr_donor,msc,tag,v_pde'
 	if version == 'vzw':
 		return vzw_header
 
@@ -114,6 +114,12 @@ def default_stuff(argv):
 		print "Nothing for now"
 #		customer_matrix(start_date,end_date,fp)
 		airsage_default(start_date,end_date,argv[3],fp)
+		points=False
+        elif (question=='Points'):
+                points=True
+        else:
+                points=True
+
 
 	# common for both
 	num_sw=int(raw_input('number of switches?\n'))
@@ -124,6 +130,8 @@ def default_stuff(argv):
 		fp.write(i.strip()+'\n')	
 	
 	fp.close()
+	if points==True:
+                subprocess.call(['./activity_points.sh'])
 #	display(fp)
 
 if __name__ == '__main__':

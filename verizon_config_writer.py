@@ -16,6 +16,8 @@ def header(version):
 
 def airsage_default(start_date,end_date,t_zone,fp):
 		days=list()
+		fp.write('--hwmrun\n'+'zone=-f %d  %d -m zone\n'  % (int(start_date),int(end_date)))
+                fp.write('--hwmrun\n'+'county=-f %d  %d -m county\n' % (int(start_date),int(end_date)))
 		days_matrix=['airsageWDDP','airsageWEDP','airsageDP9class','airsageWDH','airsageWEH']
 		for each_matrix in days_matrix:
 			#airsageWEDP=subprocess.Popen(["python","testing_date_modified.py",start_date,end_date,'airsageWE'], stdout=PIPE)
@@ -69,7 +71,7 @@ def ask(str_input):
 
 
 def time_utc(area):
-	dict = { 'Chicago' : 6 , 'Los_Angeles' : 8 , 'Denver' : 6 , 'New_York' : 5}
+	dict = { 'Chicago' : 'CST-06' , 'Los_Angeles' : 'PST-08' , 'Denver' : 'MST-07' , 'New_York' : 'EST-05','Anchorage': 'AKST-09' }
 	return dict[area]
 
 def default_stuff(argv):
@@ -89,7 +91,7 @@ def default_stuff(argv):
 	fp.write('--anlzsubrun\n')
 	fp.write('Z_adjusted_penetration=--min 3 --max auto  --filter %d  %d --min_avg_sight 180\n' % (int(start_date),int(end_date)))
 	fp.write('--timezone\n'+'America/%s\n' % argv[3])
-	fp.write('--hw_timezone\n'+'UTC-%d\n' % time_utc(argv[3]))
+	fp.write('--hw_timezone\n'+'%s\n' % time_utc(argv[3]))
 	fp.write('--timeout\n'+'43200\n'+'--data_dir\n')
 	fp.write('%s\n' % ask('Output path'))
 	fp.write('--legacy_data_dir\n')
@@ -103,13 +105,16 @@ def default_stuff(argv):
 	fp.write('--map_pickle\n'+'%s\n' % ask('map pickle file path'))
 	fp.write('--legacy_header\n'+'%s\n' % header('vzw'))
 	fp.write('--num_groups\n'+'%d\n' % num_groups)
-	fp.write('--hwmrun\n'+'zone=-f %d  %d -m zone\n'  % (int(start_date),int(end_date)))  
-	fp.write('--hwmrun\n'+'county=-f %d  %d -m county\n' % (int(start_date),int(end_date)))
 	question=ask('Points or Trips?\n')
 	if question=='Trips':
 		print "Nothing for now"
 #		customer_matrix(start_date,end_date,fp)
 		airsage_default(start_date,end_date,argv[3],fp)
+		points=False
+	elif (question=='Points'):
+		points=True
+	else:
+		points=True
 
 	# common for both
 	num_sw=int(raw_input('number of switches?\n'))
@@ -120,8 +125,13 @@ def default_stuff(argv):
 		fp.write(i.strip()+'\n')	
 	
 	fp.close()
+	if points==True:
+		subprocess.call(['./activity_points.sh'])
 #	display(fp)
 
 if __name__ == '__main__':
+	if len(sys.argv) != 4:
+        	print('usage: <./verizon_config_writer.py>   <start_date> <end_date> <time/zone(ex. Chicago>')
+        	sys.exit(1)
 	default_stuff(sys.argv)
 	
