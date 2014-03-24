@@ -36,21 +36,24 @@ def airsage_default(start_date,end_date,t_zone,fp):
 				val=i.replace("'",'')
 				days.append(val)
 			#fp.write('--tlmrun\n')
-			fp.write('--tlmrun\n'+'%s=' % each_matrix +'America/%s' % t_zone)
-			if each_matrix  in ('airsageWDDP', 'airsaegeWDH','airsageDP9class'):
+			if each_matrix in ('airsageWDH','airsageWEH'):
+				fp.write('--admrun\n'+'%s=' % each_matrix +'America/%s' % t_zone)
+			else:
+				fp.write('--tlmrun\n'+'%s=' % each_matrix +'America/%s' % t_zone)
+			if each_matrix  in ('airsageWDDP', 'airsageWDH','airsageDP9class'):
 				fp.write(' -g Tue Wed Thu -f ')
 			else:
 				fp.write(' -g Sat Sun -f ')
 			fp.write(' '.join(str(v) for v in days))
 			del days[:] # delete the list 
 			if 'DP' in each_matrix: # that is dap part exist 
-				fp.write(' -t 0000-0600-H0:H6 0600-1000-H06:H10  1000-1500-H10:H15 1500-1900-H15:H19 1900-2400-H19:H24')
+				fp.write(' -t 0000-0600-H00:H06 0600-1000-H06:H10  1000-1500-H10:H15 1500-1900-H15:H19 1900-2400-H19:H24')
 			else:
 				fp.write(' -t H')
 			if each_matrix  in ('airsageDP9class'):
-				fp.write(' -p 9-class --subscriber2class\n')
+				fp.write(' -p  9-class --subscriber2class\n')
 			else:
-				fp.write(' -p --subscriber2class -p 3-class\n')
+				fp.write(' --subscriber2class -p 3-class\n')
 
 def get_switches(n):
 	sw=set()
@@ -103,7 +106,7 @@ def default_stuff(argv):
 	fp.write('--block_id_file\n' +'%s\n' % ask('csv file absolute path'))
 	fp.write('--block_id_bitmap\n'+'%s\n' % ask('blockid tiff image path'))
 	fp.write('--custom_zone_id_bitmap\n'+'%s\n' % ask('custom tiff image path'))
-	fp.write('--sa_params\n'+'-p 3-class\n'+'--carrier\n'+'verizon\n'+'--default_tech\n'+'pcmd\n')
+	fp.write('--sa_params\n'+'-p 3-class\n'+'--carrier\n'+'sprint\n'+'--default_tech\n'+'pcmd\n')
 	fp.write('--map_pickle\n'+'%s\n' % ask('map pickle file path'))
 	fp.write('--legacy_header\n'+'%s\n' % header('vzw'))
 	fp.write('--num_groups\n'+'%d\n' % num_groups)

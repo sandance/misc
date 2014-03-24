@@ -6,6 +6,22 @@ import os
 import subprocess 
 from subprocess import PIPE
 from subprocess import check_output as qx
+import calendar,datetime
+import datetime
+from datetime import datetime,timedelta,date
+
+
+
+import month
+from month import add_month
+
+
+def date_converter(dates,flag):
+        start_year=str(dates)[0:4]
+        start_month=str(dates)[4:6]
+        start_day=str(dates)[6:]
+        return month.add_month(date(int(start_year),int(start_month),int(start_day)),flag)
+
 
 def header(version):
 	vzw_header='line,sub1,dialeddigits,longitude,latitude,d2t,uncert,method,event,epoch,type_code,pr_mid,pr_cid,pr_sid,pr_donor,route_id,sub2,dummy1,dummy2,dummy3,dummy4,dummy5,dummy6,dummy7,dummy8,dummy9,dummy10'
@@ -28,29 +44,29 @@ def airsage_default(start_date,end_date,t_zone,fp):
 			#	a=line # putting into a string format 
 			a=days_list
 			str_len=len(a)
-			#days_list.stdout.flush()  # cleaning the buffer
-			#Popen.terminate()
-			#days_list.stdin.flush()
 			r=a[2:str_len-2] # trivial process, dont know how to make it nice
 			for i in r.split(','):
 				val=i.replace("'",'')
 				days.append(val)
 			#fp.write('--tlmrun\n')
-			fp.write('--tlmrun\n'+'%s=' % each_matrix +'America/%s' % t_zone)
-			if each_matrix  in ('airsageWDDP', 'airsaegeWDH','airsageDP9class'):
+			if each_matrix in ('airsageWDH','airsageWEH'):
+                                fp.write('--admrun\n'+'%s=' % each_matrix +'America/%s' % t_zone)
+                        else:
+				fp.write('--tlmrun\n'+'%s=' % each_matrix +'America/%s' % t_zone)
+			if each_matrix  in ('airsageWDDP', 'airsageWDH','airsageDP9class'):
 				fp.write(' -g Tue Wed Thu -f ')
 			else:
 				fp.write(' -g Sat Sun -f ')
 			fp.write(' '.join(str(v) for v in days))
 			del days[:] # delete the list 
 			if 'DP' in each_matrix: # that is dap part exist 
-				fp.write(' -t 0000-0600-H0:H6 0600-1000-H06:H10  1000-1500-H10:H15 1500-1900-H15:H19 1900-2400-H19:H24')
+				fp.write(' -t 0000-0600-H00:H06 0600-1000-H06:H10  1000-1500-H10:H15 1500-1900-H15:H19 1900-2400-H19:H24')
 			else:
 				fp.write(' -t H')
 			if each_matrix  in ('airsageDP9class'):
 				fp.write(' -p 9-class --subscriber2class\n')
 			else:
-				fp.write(' -p --subscriber2class -p 3-class\n')
+				fp.write(' --subscriber2class -p 3-class\n')
 
 def get_switches(n):
 	sw=set()
@@ -96,8 +112,8 @@ def default_stuff(argv):
 	fp.write('%s\n' % ask('Output path'))
 	fp.write('--legacy_data_dir\n')
 	fp.write('%s\n' % ask('PDE data path'))
-	fp.write('--start_date\n'+'%d\n' % int(start_date))
-	fp.write('--end_date\n'+'%d\n'	% int(end_date))
+	fp.write('--start_date\n'+'%s\n' % (date_converter(int(argv[1]),-1))) # One month back
+        fp.write('--end_date\n'+'%s\n'  %  (date_converter(int(argv[2]), 1))) # one month ahead
 	fp.write('--block_id_file\n' +'%s\n' % ask('csv file absolute path'))
 	fp.write('--block_id_bitmap\n'+'%s\n' % ask('blockid tiff image path'))
 	fp.write('--custom_zone_id_bitmap\n'+'%s\n' % ask('custom tiff image path'))
