@@ -36,14 +36,14 @@ def airsage_default(start_date,end_date,t_zone,fp):
 		fp.write('[hwmrun]\n')
 		fp.write('\tcounty=-f %d  %d -m county\n' % (int(start_date),int(end_date)))
 		fp.write('\tzone=-f %d  %d -m zone\n'  % (int(start_date),int(end_date)))
-		fp.write('[tlmrun]\n\n\n')
+		fp.write('\n[tlmrun]\n')
 
 		days_matrix=['airsageWDDP','airsageWEDP','airsageDP9class','airsageWDH','airsageWEH']
 		for index,each_matrix in enumerate(days_matrix):
 			#airsageWEDP=subprocess.Popen(["python","testing_date_modified.py",start_date,end_date,'airsageWE'], stdout=PIPE)
 			#days_list=subprocess.Popen(["python","testing_date_modified.py",start_date,end_date,each_matrix], stdout=PIPE)
 			if index == 3:
-				fp.write('[admrun]\n\n')
+				fp.write('\n[admrun]\n')
 		
 			days_list=""
 			days_list=qx(["python","testing_date_modified.py",start_date,end_date,each_matrix])
@@ -117,13 +117,13 @@ def penetration(start_date,end_date,carrier,fp):
 		fp.write('\tM_date_range = --filter %d %d --min_avg_sight 180\n' % (int(start_date),int(end_date)))
 
 def dagjobs(fp):
-	fp.write('[packages]\n')
-	fp.write('\tpkg_metrics = metrics-11.1.0-beta-49-g1c623cb.tar.gz\n')
-	fp.write('\tpkg_odd = clustering-11.1.0-beta-49-g1c623cb.tar.gz\n')
-	fp.write('\tpkg_od = od-11.1.0-beta-49-g1c623cb.sxb\n')
-	fp.write('\tpkg_bc_od = bc-11.1.0-beta-49-g1c623cb.sxb\n')
-	fp.write('\tpkg_pde = pdeloc-11.1.0-beta-49-g1c623cb.sxb\n')
-	fp.write('\tpkg_parser = cdma-11.1.0-beta-49-g1c623cb.tar.gz\n')	
+	fp.write('\n[packages]\n')
+	fp.write('\tpkg_metrics = metrics-11.1.1-0-g6097745.tar.gz\n')
+	fp.write('\tpkg_odd = clustering-11.1.1-0-g6097745.tar.gz\n')
+	fp.write('\tpkg_od = od-11.1.1-0-g6097745.sxb\n')
+	fp.write('\tpkg_bc_od = bc-11.1.1-0-g6097745.sxb\n')
+	fp.write('\tpkg_pde = pdeloc-11.1.1-0-g6097745.sxb\n')
+	fp.write('\tpkg_parser = cdma-11.1.1-0-g6097745.tar.gz\n')	
 		
 		
 		
@@ -141,6 +141,7 @@ def default_stuff(argv):
 	######################################### Common Variables ##################################
 	fp = open('dagjobsfull.cfg','w')
 	fp.write('carrier = %s\n' % carrier)
+	fp.write('run_type = %s\n' % argv[5]) # legacy_cp / legacy_od / legacy_all
 	switch_list(fp)
 	fp.write('mega_base_url = ftp://10.255.3.20\n')
 		
@@ -157,13 +158,13 @@ def default_stuff(argv):
 	fp.write('hw_timezone = %s\n' % time_utc(argv[3]))
 	fp.write('default_tech = pcmd\n')
 	######################################## Files ###########################################
-	fp.write('\n\n\n')	
+	fp.write('\n\n')	
 	fp.write('block_id_file = %s\n' % ask('csv file absolute path'))
 	fp.write('map_pickle = %s\n' % ask('map pickle file path'))
 	fp.write('custom_zone_id_bitmap = %s\n' % ask('custom tiff image path'))
 	fp.write('block_id_bitmap = %s\n' % ask('blockid tiff image path'))
 	######################################## Directories ####################################
-	fp.write('\n\n\n')
+	fp.write('\n\n')
 	fp.write('legacy_data_dir = %s\n' % ask('PDE data path'))
 	fp.write('data_dir = %s\n' % ask('Output path'))
 	if carrier.lower()=='sprint':
@@ -174,11 +175,12 @@ def default_stuff(argv):
 		print "Verizon study , so no opt out file"	
 
 	######################################## Miscellaneous ##################################
-	fp.write('\n\n\n')
+	fp.write('\n\n')
+	fp.write('sa_params = -p 3-class\n')
 	fp.write('max_disk = 999999999\n'+'retry = 1\n'+'pkg_bashreduce = bashreduce-v1.0-2-g71fffec.sxb\n')
 	fp.write('declare_capacity = 1\n'+'max_cpus = 23\n')
 	fp.write('legacy_header = %s\n' % header(carrier))
-	fp.write('work_base_dir = work\n' + 'rank_expression = "Rank = Cpus"\n'+'timeout = 10800\n'+'adjust_epoch = 0\n'+'notify_user = ops@airsage.com\n') 
+	fp.write('work_base_dir = work\n' + 'rank_expression = Rank = Cpus\n'+'timeout = 43200\n'+'adjust_epoch = 0\n'+'notify_user = ops@airsage.com\n') 
 	question=ask('Points or Trips?\n')
 	if question=='Trips':
 		print "Nothing for now"
@@ -198,7 +200,7 @@ def default_stuff(argv):
 #	display(fp)
 
 if __name__ == '__main__':
-	if len(sys.argv) != 5:
+	if len(sys.argv) != 6:
         	print('usage: <./vzw_newformat.py>   <start_date> <end_date> <time/zone(ex. Chicago> <sprint/verizon/ibm')
         	sys.exit(1)
 	default_stuff(sys.argv)

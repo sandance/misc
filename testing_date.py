@@ -60,12 +60,12 @@ print "\n"
 print "All thuday  are"
 print " ".join(str(v) for v in thDay)
 print "\n"
-
+"""
 print "All Friday  are"
 print " ".join(str(v) for v in fDay)
 print "\n"
 
-"""
+
 merge=list()
 
 #Extension 
