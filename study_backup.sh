@@ -36,7 +36,7 @@ send_to_san()
 {
 
 	cd  /mnt/$volume/atp/temp/
-	tar -zc $osticket/  -f - | ssh nazmul@10.255.210.253 " cat > /opt/odstudies/CURRENT/${osticket}.tgz " 
+	tar -c $osticket/  -f - | ssh nazmul@10.255.210.253 " cat > /opt/odstudies/CURRENT/${osticket}.tar " 
 #	rm -rf $study_path
 
 #:%s/\/mnt\/$cluster\/$volume\/temp\/$osticket\//temp_dir/g

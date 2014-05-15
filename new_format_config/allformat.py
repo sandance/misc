@@ -26,8 +26,8 @@ def date_converter(dates,flag):
 def header(version):
 	legacy_header={ 
 'verizon' : '"line,sub1,dialeddigits,longitude,latitude,d2t,uncert,method,event,epoch,type_code,pr_mid,pr_cid,pr_sid,pr_donor,route_id,sub2,dummy1,dummy2,dummy3,dummy4,dummy5,dummy6,dummy7,dummy8,dummy9,dummy10"' ,
-'sprint'  : '"line,sub1,dialeddigits,longitude,latitude,d2t,uncert,method,event,epoch,type_code,pr_mid,pr_cid,pr_sid,pr_donor,route_id,sub2"',
-'ibm' : '"line,sub1,dialeddigits,longitude,latitude,d2t,uncert,method,event,epoch,type_code,pr_mid,pr_cid,pr_sid,pr_donor,route_id,sub2"' }
+'sprint'  : '"uid,tech,filename,line,sub1,sub2,dd,epoch,event,tcode,pilots,tt,cd,ot,pilot1,pilot2,pilot3,pilot4,pilot5,v_parser,kclass,serv_cid,sub_cid,optout,longitude,latitude,d2t,uncert,method,type_code,pr_donor,msc,tag,v_pde"',
+'ibm' : '"uid,tech,filename,line,sub1,sub2,dd,epoch,event,tcode,pilots,tt,cd,ot,pilot1,pilot2,pilot3,pilot4,pilot5,v_parser,kclass,serv_cid,sub_cid,optout,longitude,latitude,d2t,uncert,method,type_code,pr_donor,msc,tag,v_pde"' }
 	return legacy_header[version.lower()]
 
 
@@ -108,26 +108,22 @@ def switch_list(fp):
 
 def penetration(start_date,end_date,carrier,fp):
 	fp.write('[anlzsubrun]\n')
-        print ("carrier u r using %s" % carrier)	
-	if carrier.lower() == 'sprint':
-		fp.write('\tZ_adjusted_penetration = --min 4 --max 22 --min_avg_sight 180\n')
+	if carrier.lower() == 'sprint' or 'ibm':
+		fp.write('\tZ_adjusted_penetration = --min 3 --max 180   --min_avg_sight 180\n')
 		fp.write('\tA_initial_all_subscribers = --min_avg_sight 180\n')
-	elif carrier.lower() == 'ibm':
-		fp.write('\tZ_adjusted_penetration = --min 4 --max 22 --min_avg_sight 180\n')
-                fp.write('\tA_initial_all_subscribers = --min_avg_sight 180\n')
 	elif carrier.lower() == 'verizon':
-		fp.write('\tZ_adjusted_penetration = --min 3 --max auto  --filter %d  %d --min_avg_sight 180\n' % (int(start_date),int(end_date)))
+		fp.write('\tZ_adjusted_penetration = --min 3 --max 180  --filter %d  %d --min_avg_sight 180\n' % (int(start_date),int(end_date)))
 		fp.write('\tA_initial_all_subscribers = --min_avg_sight 180\n')
 		fp.write('\tM_date_range = --filter %d %d --min_avg_sight 180\n' % (int(start_date),int(end_date)))
 
 def dagjobs(fp):
 	fp.write('\n[packages]\n')
-	fp.write('\tpkg_metrics = metrics-11.1.3-0-g3d8c711.tar.gz\n')
-	fp.write('\tpkg_odd = clustering-11.1.3-0-g3d8c711.tar.gz\n')
-	fp.write('\tpkg_od = od-11.1.3-0-g3d8c711.sxb\n')
-	fp.write('\tpkg_bc_od = bc-11.1.3-0-g3d8c711.sxb\n')
-	fp.write('\tpkg_pde = pdeloc-11.1.3-0-g3d8c711.sxb\n')
-	fp.write('\tpkg_parser = cdma-11.1.3-0-g3d8c711.tar.gz\n')	
+	fp.write('\tpkg_metrics = metrics-11.1.2-0-g1918d00.tar.gz\n')
+	fp.write('\tpkg_odd = clustering-11.1.2-0-g1918d00.tar.gz\n')
+	fp.write('\tpkg_od = od-11.1.2-0-g1918d00.sxb\n')
+	fp.write('\tpkg_bc_od = bc-11.1.2-0-g1918d00.sxb\n')
+	fp.write('\tpkg_pde = pdeloc-11.1.2-0-g1918d00.sxb\n')
+	fp.write('\tpkg_parser = cdma-11.1.2-0-g1918d00.tar.gz\n')	
 		
 		
 		
@@ -141,7 +137,7 @@ def default_stuff(argv):
 	end_date=argv[2]
 	carrier=argv[4]
 	num_groups=100 # or in future argv[3]
-        #print ("carrier u r using %s" % carrier)	
+	
 	######################################### Common Variables ##################################
 	fp = open('dagjobsfull.cfg','w')
 	fp.write('carrier = %s\n' % carrier)
@@ -152,12 +148,18 @@ def default_stuff(argv):
 	fp.write('timezone = '+'America/%s\n' % argv[3])
 	fp.write('num_groups = '+'%d\n' % num_groups)
 	if carrier.lower() == 'verizon':
-		fp.write('start_date = %s\n' % (date_converter(int(argv[1]),-1))) # One month back
-		fp.write('end_date = %s\n'  %  (date_converter(int(argv[2]), 1))) # one month ahead
+		sdate=str((date_converter(int(argv[1]),-1)))
+		edate=str(date_converter(int(argv[2]), 1))
+		sdadt=str(sdate[0:4])+'-'+str(sdate[4:6])+'-'+str(sdate[6:8])
+		enddt=str(edate[0:4])+'-'+str(edate[4:6])+'-'+str(edate[6:8])
+		fp.write('start_date = %s\n' % sdadt) # One month back
+		fp.write('end_date = %s\n'  %  enddt) # one month ahead
 	else:	
 		# for sprint portion should be here
-		fp.write('start_date = %d\n' % int(start_date))
-	        fp.write('end_date = %d\n'  % int(end_date))
+		stadt=str(start_date[0:4])+'-'+str(start_date[4:6])+'-'+str(start_date[6:8])
+		enddt=str(end_date[0:4])+'-'+str(end_date[4:6])+'-'+str(end_date[6:8])
+		fp.write('start_date = %s\n' % stadt)
+	        fp.write('end_date = %s\n'  % enddt)
 
 	fp.write('hw_timezone = %s\n' % time_utc(argv[3]))
 	fp.write('default_tech = pcmd\n')
