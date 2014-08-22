@@ -1,0 +1,2 @@
+wichita_1315	/mnt/glusterfs/static2/atp/wichita_1315/	/mnt/glusterfs/static2/pde_data/temp/	OS-1315	od_1315_wichitaks	disk4	static2
+2274_televzcharlotte	/mnt/glusterfs/od2/atp/2274_televzcharlotte/	/mnt/glusterfs/static2/pde_data/temp/	OS-2274	od_location_smart	disk4	od2

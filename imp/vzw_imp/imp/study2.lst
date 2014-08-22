@@ -1,0 +1,6 @@
+Dallas	/mnt/glusterfs/static2/atp/Dallas/	/mnt/glusterfs/static2/pde_data/temp/	OS-Dallas_vzw	od_dallas	disk31	static2
+Houston	/mnt/glusterfs/static2/atp/Houston/	/mnt/glusterfs/static2/pde_data/temp/	OS-Houston	od_houston99	disk31	static2
+Hubbard	/mnt/glusterfs/static2/atp/Hubbard/	/mnt/glusterfs/static2/pde_data/temp/	OS-Hubbard	od_hubbard	disk32	static2
+Semcog	/mnt/glusterfs/static2/atp/Semcog/	/mnt/glusterfs/static2/pde_data/temp/	OS-Semcog	od_semcog	disk32	static2
+Carson	/mnt/glusterfs/static2/atp/Carson/	/mnt/glusterfs/static2/pde_data/temp/	OS-Carson 	od_carson	disk32	static2
+Oahu	/mnt/glusterfs/od2/atp/Oahu/	/mnt/glusterfs/static2/pde_data/temp/	OS-Oahu	od_oahu	disk32	od2

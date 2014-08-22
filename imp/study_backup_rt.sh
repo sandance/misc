@@ -3,8 +3,8 @@
 
 
 studyname=$1
-postpde=$3
-pde=$2
+postpde=$2
+pde=$3
 ticket=$4
 account=$5
 disk=$6
@@ -20,16 +20,6 @@ usage()
 }
 
 
-#group_files_for_san()
-#{
-#	ssh nazmul@10.255.210.253 "mkdir -p /opt/odstudies/CURRENT/$ticket/{OD,config}"
-#	rsync -avz  $postpde/output/{HomeWorkGroup,HomeWorkAll,Penetration,GenerateTripLegs,GenerateTripLegsSubDAG,GenerateHomeWorkMatrix,GenerateTripLegMatrix,CombineTripLegs,ClassifySubscribers,PackageODStudy,ClassifyPointsDayGroup,ClassifyPointsDay,PackageClassifiedPoints}  nazmul@10.255.210.253:/opt/odstudies/CURRENT/$ticket/OD/ 
-
-#	rsync -avz /opt/home/$account/  nazmul@10.255.210.253:/opt/odstudies/CURRENT/$ticket/config/
-
-#	ssh nazmul@10.255.210.253 "tar -cv --remove-files -f /opt/odstudies/CURRENT/${ticket}.tar /opt/odstudies/CURRENT/$ticket/ "
-
-#}
 
 
 group_files_for_san()
@@ -41,6 +31,14 @@ group_files_for_san()
 #	sudo cp -rf  /opt/home/$account/atp  $temp_dir/user/    #copy user account config files  
 	echo "grouping done "
 }
+
+
+send_to_SL()
+{
+	cd /mnt/glusterfs/$volume/atp/temp/$ticket
+
+
+
 
 send_to_san()
 {

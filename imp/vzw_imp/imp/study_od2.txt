@@ -1,0 +1,5 @@
+806_tyletexas /mnt/glusterfs/od2/atp/1806_tyletexas/exec_20140221-20140521/ /mnt/glusterfs/static2/pde_data/ttexas/ OS-1806 od_1806_newtylertexas disk17 od2
+621_chicagots2 /mnt/glusterfs/od2/atp/621_chicagots2/ /mnt/glusterfs/static2/pde_data/621-chicagots2/ OS-621 od_chicago_ts2 disk17 od2
+1603_houston /mnt/glusterfs/od2/atp/1603_houston/exec_20130901-20131130/ /mnt/glusterfs/static2/pde_data/houston/ OS-1603 od_1603_houston disk18 od2
+1707_syracuse /mnt/glusterfs/od2/atp/1707_syracuse/exec_20130901-20131130/ /mnt/glusterfs/static2/pde_data/syracuse/ OS-1707 od_1707_syracuse disk18 od2
+KansasCityTS3 /mnt/glusterfs/od2/atp/KansasCityTS3/ /mnt/glusterfs/od2/pde_data/kansas-os728/ OS-728 od_728_kansascityts3 disk19 od2

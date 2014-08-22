@@ -1,0 +1,6 @@
+2097_kentuckykipda	/mnt/glusterfs/od/atp/2097_kentuckykipda/	/mnt/glusterfs/static2/pde_data/temp/	OS-2097	disk5	od
+2274_televzcharlotte	/mnt/glusterfs/od/atp/2274_televzcharlotte/	/mnt/glusterfs/static2/pde_data/temp/	OS-2274	od_location_smart	disk5	od
+Oahu	/mnt/glusterfs/od/atp/Oahu/	/mnt/glusterfs/static2/pde_data/temp/	OS-Oahu	od_oahu	disk6	od
+od_2183_wallavalley	/mnt/glusterfs/od/atp/od_2183_wallavalley/	/mnt/glusterfs/static2/pde_data/temp/	OS-2183	od_2183_wallavalley	disk5	od
+OmahaMSA	/mnt/glusterfs/od/atp/OmahaMSA/	/mnt/glusterfs/static2/pde_data/temp/	OS-Omaha	od_486_omahamsa	disk6	od
+Semcog	/mnt/glusterfs/od/atp/Semcog/	/mnt/glusterfs/static2/pde_data/temp/	OS-Semcog	od_semcog	disk7	od

@@ -1,0 +1,6 @@
+1822_southtexas_two	/mnt/glusterfs/od2/atp/1822_southtexas_two/	/mnt/glusterfs/static2/pde_data/temp/	OS-1822	od_1822_southtexas-two	disk21	od2
+2217_rochester	/mnt/glusterfs/od2/atp/2217_rochester/exec_20140401-20140430/	/mnt/glusterfs/static2/pde_data/temp/	OS-2217	od_2217_rochester	disk22	od2
+936_lakepont	/mnt/glusterfs/od2/atp/936_lakepont/	/mnt/glusterfs/static2/pde_data/temp/	OS-2217	od_936_lakepont	disk21	od2
+998_chrysler	/mnt/glusterfs/od2/atp/998_chrysler/	/mnt/glusterfs/static2/pde_data/temp/	OS-936	od_998_chryslersample	disk21	od2
+Dallas	/mnt/glusterfs/od2/atp/Dallas/	/mnt/glusterfs/static2/pde_data/temp/	OS-Dallas_vzw	od_dallas	disk22	od2
+od_2183_wallavalley	/mnt/glusterfs/od2/atp/od_2183_wallavalley/	/mnt/glusterfs/static2/pde_data/temp/	OS-2183	od_2183_wallavalley	disk22	od2
