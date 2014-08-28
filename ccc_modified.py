@@ -25,18 +25,9 @@ def get_count(data):
 				#print "count 0 %d" % count_0
 				sw.append(int(i[0]))
 				final_output.append(count_0)
-			elif i[1]=='error_code':
-				#print "Found error code"
-				final_output.append(sum(sw[:]))
-				flag=1
-				if 'pcmd' in final_output[0]:
-					flag=2
-				percent=float(sw[0]) * 100.0 / (flag * float(sum(sw[:])))
-				final_output.append(round(percent,2))
-				del sw[:]
-			#	print "This is what is want"
-			#	print i[1]
-			elif k==2 and i[1]=='502':
+			elif i[1]=='502':
+				sw.append(int(i[0]))
+			elif i[1]=='503':
 				sw.append(int(i[0]))
 				final_output.append(sum(sw[:]))
 				flag=1
@@ -58,4 +49,4 @@ if __name__=='__main__':
 		dis=",".join(str(x) for x in final_data[i:i+5])
 		print dis.strip('[]')
 	# now calculate percentage
-	
+

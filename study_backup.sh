@@ -3,8 +3,8 @@
 
 
 studyname=$1
-pdepath=$2
-postpde=$3
+pdepath=$3
+postpde=$2
 od_account=$4
 osticket=$5
 

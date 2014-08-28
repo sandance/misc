@@ -31,8 +31,8 @@ def calculation(cursor,switch):
 
 
 def main():
-    conn_string = "host='10.255.3.20' dbname='mega' user='mega' password='mega!'"
-    
+    conn_string = "host='10.255.0.218' dbname='mega' user='mega' password='mega!'"
+    #conn_string = "host='10.255.3.20' dbname='mega' user='mega' password='mega!'"
     #Print the connection string we will use to connect
     #print "Connecting to database\n =>%s" % (conn_string)
 
@@ -47,7 +47,8 @@ def main():
     #################################### Getting the list of Switches ################################################
     sw_list=set()
 
-    cursor.execute("SELECT msc  FROM public.pde20121212")
+    #cursor.execute("SELECT msc  FROM public.pde20121212")
+    cursor.execute("SELECT msc  FROM public.lcib20131016")
     all_sw = cursor.fetchall()
     for i,switch in enumerate(all_sw):
         sw_list.add(switch[0])

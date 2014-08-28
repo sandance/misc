@@ -70,17 +70,13 @@ sleep 1
 
 cat  >> ~/atp/$StudyName/input/dagjobs.cfg << EOL
 --pkg_bc_od
-bc-11.0.1-0-g5eac180.sxb
+atp_batch-11.3.0-0-gbee6fe9.sxb
 --pkg_metrics
-metrics-11.0.1-0-g5eac180.tar.gz
---pkg_parser
-cdma-11.0.1-0-g5eac180.tar.gz
---pkg_pde
-pdeloc-11.0.1-0-g5eac180.sxb
+metrics-11.3.0-0-gbee6fe9.tar.gz
 --pkg_odd
-clustering-11.0.1-0-g5eac180.tar.gz
---pkg_od
-od-11.0.1-0-g5eac180.sxb
+clustering-11.3.0-0-gbee6fe9.tar.gz
+--pkg_pde
+pdeloc-11.3.0-0-gbee6fe9.sxb
 EOL
 }
 
