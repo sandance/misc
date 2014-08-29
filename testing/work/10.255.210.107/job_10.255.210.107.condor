@@ -1,0 +1,15 @@
+notification = Error
+notify_user =  nislam@airsage.com
+Executable  =  /home/airsageops/testing/script/disk_check.sh
+Arguments       = /gluster_bricks/dell1/brick1 /gluster_bricks/dell2/brick1 /gluster_bricks/dell2/brick2
+Universe        = vanilla
+Error           = /home/airsageops/testing/work/10.255.210.107//job-10.255.210.107.err
+Output          = /home/airsageops/testing/work/10.255.210.107//job_10.255.210.107.out
+Log             = /home/airsageops/testing/work/10.255.210.107//job_10.255.210.107.log
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = /home/airsageops/testing/script/disk_check.sh
+
+Requirements = (( Machine=="anzcen107.anz.airsage.com" ))
+Queue
