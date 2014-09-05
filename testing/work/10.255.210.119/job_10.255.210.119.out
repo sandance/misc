@@ -1,0 +1,4 @@
+Filesystem	Size Used Avail	Disk		Use%
+10.255.210.119	931G 459G 473G	/dev/sdb1	50
+10.255.210.119	931G 535G 397G	/dev/sdc1	58
+10.255.210.119	931G 509G 423G	/dev/sdd1	55

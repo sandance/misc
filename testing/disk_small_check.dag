@@ -1,0 +1,15 @@
+JOB number-1 work/10.255.210.135/job_10.255.210.135.condor
+JOB number-2 work/10.255.210.147/job_10.255.210.147.condor
+JOB number-3 work/10.255.210.162/job_10.255.210.162.condor
+JOB number-4 work/10.255.210.106/job_10.255.210.106.condor
+JOB number-5 work/10.255.210.156/job_10.255.210.156.condor
+JOB number-6 work/10.255.210.140/job_10.255.210.140.condor
+JOB number-7 work/10.255.210.132/job_10.255.210.132.condor
+JOB number-8 work/10.255.210.127/job_10.255.210.127.condor
+JOB number-9 work/10.255.210.116/job_10.255.210.116.condor
+JOB number-10 work/10.255.210.143/job_10.255.210.143.condor
+JOB number-11 work/10.255.210.105/job_10.255.210.105.condor
+JOB number-12 work/10.255.210.119/job_10.255.210.119.condor
+JOB number-63 work/10.255.210.145/job_10.255.210.145.condor
+DAGMAN_MAX_JOBS_IDLE=100
+DAGMAN_MAX_JOBS_SUBMITTED=400

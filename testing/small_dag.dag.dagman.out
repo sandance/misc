@@ -1,0 +1,149 @@
+09/05/14 17:17:01 ******************************************************
+09/05/14 17:17:01 ** condor_scheduniv_exec.1532723.0 (CONDOR_DAGMAN) STARTING UP
+09/05/14 17:17:01 ** /usr/bin/condor_dagman
+09/05/14 17:17:01 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+09/05/14 17:17:01 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+09/05/14 17:17:01 ** $CondorVersion: 8.2.2 Aug 07 2014 BuildID: 265643 $
+09/05/14 17:17:01 ** $CondorPlatform: x86_64_RedHat6 $
+09/05/14 17:17:01 ** PID = 6285
+09/05/14 17:17:01 ** Log last touched time unavailable (No such file or directory)
+09/05/14 17:17:01 ******************************************************
+09/05/14 17:17:01 Using config source: /etc/condor/condor_config
+09/05/14 17:17:01 Using local config sources: 
+09/05/14 17:17:01    /etc/condor/condor_config.local
+09/05/14 17:17:01 config Macros = 150, Sorted = 150, StringBytes = 3588, TablesBytes = 5448
+09/05/14 17:17:01 CLASSAD_CACHING is ENABLED
+09/05/14 17:17:01 Daemon Log is logging: D_ALWAYS D_ERROR D_COMMAND
+09/05/14 17:17:01 DaemonCore: command socket at <10.255.211.13:41794>
+09/05/14 17:17:01 DaemonCore: private command socket at <10.255.211.13:41794>
+09/05/14 17:17:01 DAGMAN_USE_STRICT setting: 1
+09/05/14 17:17:01 DAGMAN_VERBOSITY setting: 3
+09/05/14 17:17:01 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+09/05/14 17:17:01 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+09/05/14 17:17:01 DAGMAN_SUBMIT_DELAY setting: 0
+09/05/14 17:17:01 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+09/05/14 17:17:01 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+09/05/14 17:17:01 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 1000
+09/05/14 17:17:01 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+09/05/14 17:17:01 DAGMAN_DEFAULT_PRIORITY setting: 0
+09/05/14 17:17:01 DAGMAN_ALWAYS_USE_NODE_LOG setting: True
+09/05/14 17:17:01 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+09/05/14 17:17:01 allow_events (DAGMAN_IGNORE_DUPLICATE_JOB_EXECUTION, DAGMAN_ALLOW_EVENTS) setting: 114
+09/05/14 17:17:01 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+09/05/14 17:17:01 DAGMAN_RETRY_NODE_FIRST setting: False
+09/05/14 17:17:01 DAGMAN_MAX_JOBS_IDLE setting: 0
+09/05/14 17:17:01 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+09/05/14 17:17:01 DAGMAN_MAX_PRE_SCRIPTS setting: 0
+09/05/14 17:17:01 DAGMAN_MAX_POST_SCRIPTS setting: 0
+09/05/14 17:17:01 DAGMAN_ALLOW_LOG_ERROR setting: False
+09/05/14 17:17:01 DAGMAN_MUNGE_NODE_NAMES setting: True
+09/05/14 17:17:01 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+09/05/14 17:17:01 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+09/05/14 17:17:01 DAGMAN_ALWAYS_RUN_POST setting: True
+09/05/14 17:17:01 DAGMAN_ABORT_DUPLICATES setting: True
+09/05/14 17:17:01 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+09/05/14 17:17:01 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+09/05/14 17:17:01 DAGMAN_AUTO_RESCUE setting: True
+09/05/14 17:17:01 DAGMAN_MAX_RESCUE_NUM setting: 100
+09/05/14 17:17:01 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+09/05/14 17:17:01 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+09/05/14 17:17:01 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+09/05/14 17:17:01 DAGMAN_MAX_JOB_HOLDS setting: 100
+09/05/14 17:17:01 DAGMAN_HOLD_CLAIM_TIME setting: 20
+09/05/14 17:17:01 ALL_DEBUG setting: D_COMMAND
+09/05/14 17:17:01 DAGMAN_DEBUG setting: 
+09/05/14 17:17:01 argv[0] == "condor_scheduniv_exec.1532723.0"
+09/05/14 17:17:01 argv[1] == "-Lockfile"
+09/05/14 17:17:01 argv[2] == "small_dag.dag.lock"
+09/05/14 17:17:01 argv[3] == "-AutoRescue"
+09/05/14 17:17:01 argv[4] == "1"
+09/05/14 17:17:01 argv[5] == "-DoRescueFrom"
+09/05/14 17:17:01 argv[6] == "0"
+09/05/14 17:17:01 argv[7] == "-Dag"
+09/05/14 17:17:01 argv[8] == "small_dag.dag"
+09/05/14 17:17:01 argv[9] == "-Suppress_notification"
+09/05/14 17:17:01 argv[10] == "-CsdVersion"
+09/05/14 17:17:01 argv[11] == "$CondorVersion: 8.2.2 Aug 07 2014 BuildID: 265643 $"
+09/05/14 17:17:01 argv[12] == "-Dagman"
+09/05/14 17:17:01 argv[13] == "/usr/bin/condor_dagman"
+09/05/14 17:17:03 Default node log file is: </home/airsageops/testing/./small_dag.dag.nodes.log>
+09/05/14 17:17:03 DAG Lockfile will be written to small_dag.dag.lock
+09/05/14 17:17:03 DAG Input file is small_dag.dag
+09/05/14 17:17:03 Ignoring value of DAGMAN_LOG_ON_NFS_IS_ERROR.
+09/05/14 17:17:03 Parsing 1 dagfiles
+09/05/14 17:17:03 Parsing small_dag.dag ...
+09/05/14 17:17:03 Dag contains 3 total jobs
+09/05/14 17:17:03 Sleeping for 12 seconds to ensure ProcessId uniqueness
+09/05/14 17:17:15 Bootstrapping...
+09/05/14 17:17:15 Number of pre-completed nodes: 0
+09/05/14 17:17:15 Of 3 nodes total:
+09/05/14 17:17:15  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+09/05/14 17:17:15   ===     ===      ===     ===     ===        ===      ===
+09/05/14 17:17:15     0       0        0       0       3          0        0
+09/05/14 17:17:15 0 job proc(s) currently held
+09/05/14 17:17:16 Registering condor_event_timer...
+09/05/14 17:17:17 MultiLogFiles: truncating log file /home/airsageops/testing/./small_dag.dag.nodes.log
+09/05/14 17:17:17 Submitting Condor Node number-37 job(s)...
+09/05/14 17:17:17 Adding a DAGMan auxiliary log /home/airsageops/testing/./small_dag.dag.nodes.log
+09/05/14 17:17:17 Masking the events recorded in the DAGMAN auxiliary log
+09/05/14 17:17:17 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+09/05/14 17:17:17 submitting: condor_submit -a dag_node_name' '=' 'number-37 -a +DAGManJobId' '=' '1532723 -a DAGManJobId' '=' '1532723 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-37 -a dagman_log' '=' '/home/airsageops/testing/./small_dag.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.102/job_10.255.210.102.condor
+09/05/14 17:17:18 From submit: Submitting job(s).
+09/05/14 17:17:18 From submit: 1 job(s) submitted to cluster 1533625.
+09/05/14 17:17:22 	assigned Condor ID (1533625.0.0)
+09/05/14 17:17:22 Submitting Condor Node number-43 job(s)...
+09/05/14 17:17:22 Adding a DAGMan auxiliary log /home/airsageops/testing/./small_dag.dag.nodes.log
+09/05/14 17:17:22 Masking the events recorded in the DAGMAN auxiliary log
+09/05/14 17:17:22 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+09/05/14 17:17:22 submitting: condor_submit -a dag_node_name' '=' 'number-43 -a +DAGManJobId' '=' '1532723 -a DAGManJobId' '=' '1532723 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-43 -a dagman_log' '=' '/home/airsageops/testing/./small_dag.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.159/job_10.255.210.159.condor
+09/05/14 17:17:23 From submit: Submitting job(s).
+09/05/14 17:17:23 From submit: 1 job(s) submitted to cluster 1533799.
+09/05/14 17:17:24 	assigned Condor ID (1533799.0.0)
+09/05/14 17:17:24 Submitting Condor Node number-13 job(s)...
+09/05/14 17:17:24 Adding a DAGMan auxiliary log /home/airsageops/testing/./small_dag.dag.nodes.log
+09/05/14 17:17:24 Masking the events recorded in the DAGMAN auxiliary log
+09/05/14 17:17:24 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+09/05/14 17:17:24 submitting: condor_submit -a dag_node_name' '=' 'number-13 -a +DAGManJobId' '=' '1532723 -a DAGManJobId' '=' '1532723 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-13 -a dagman_log' '=' '/home/airsageops/testing/./small_dag.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.153/job_10.255.210.153.condor
+09/05/14 17:17:25 From submit: Submitting job(s).
+09/05/14 17:17:25 From submit: 1 job(s) submitted to cluster 1533906.
+09/05/14 17:17:27 	assigned Condor ID (1533906.0.0)
+09/05/14 17:17:27 Just submitted 3 jobs this cycle...
+09/05/14 17:17:27 Currently monitoring 1 Condor log file(s)
+09/05/14 17:17:27 Reassigning the id of job number-37 from (1533625.0.0) to (1533625.0.0)
+09/05/14 17:17:27 Event: ULOG_SUBMIT for Condor Node number-37 (1533625.0.0)
+09/05/14 17:17:27 Number of idle job procs: 1
+09/05/14 17:17:27 Reassigning the id of job number-43 from (1533799.0.0) to (1533799.0.0)
+09/05/14 17:17:27 Event: ULOG_SUBMIT for Condor Node number-43 (1533799.0.0)
+09/05/14 17:17:27 Number of idle job procs: 2
+09/05/14 17:17:27 Reassigning the id of job number-13 from (1533906.0.0) to (1533906.0.0)
+09/05/14 17:17:27 Event: ULOG_SUBMIT for Condor Node number-13 (1533906.0.0)
+09/05/14 17:17:27 Number of idle job procs: 3
+09/05/14 17:17:27 Of 3 nodes total:
+09/05/14 17:17:27  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+09/05/14 17:17:27   ===     ===      ===     ===     ===        ===      ===
+09/05/14 17:17:27     0       0        3       0       0          0        0
+09/05/14 17:17:27 0 job proc(s) currently held
+09/05/14 17:17:32 Currently monitoring 1 Condor log file(s)
+09/05/14 17:17:32 Event: ULOG_EXECUTE for Condor Node number-37 (1533625.0.0)
+09/05/14 17:17:32 Number of idle job procs: 2
+09/05/14 17:17:32 Event: ULOG_JOB_TERMINATED for Condor Node number-37 (1533625.0.0)
+09/05/14 17:17:32 Number of idle job procs: 2
+09/05/14 17:17:32 Node number-37 job proc (1533625.0.0) completed successfully.
+09/05/14 17:17:32 Node number-37 job completed
+09/05/14 17:17:32 Of 3 nodes total:
+09/05/14 17:17:32  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+09/05/14 17:17:32   ===     ===      ===     ===     ===        ===      ===
+09/05/14 17:17:32     1       0        2       0       0          0        0
+09/05/14 17:17:32 0 job proc(s) currently held
+09/05/14 17:17:58 Currently monitoring 1 Condor log file(s)
+09/05/14 17:17:58 Event: ULOG_EXECUTE for Condor Node number-43 (1533799.0.0)
+09/05/14 17:17:58 Number of idle job procs: 1
+09/05/14 17:17:58 Event: ULOG_JOB_TERMINATED for Condor Node number-43 (1533799.0.0)
+09/05/14 17:17:58 Number of idle job procs: 1
+09/05/14 17:17:58 Node number-43 job proc (1533799.0.0) completed successfully.
+09/05/14 17:17:58 Node number-43 job completed
+09/05/14 17:17:58 Of 3 nodes total:
+09/05/14 17:17:58  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+09/05/14 17:17:58   ===     ===      ===     ===     ===        ===      ===
+09/05/14 17:17:58     2       0        1       0       0          0        0
+09/05/14 17:17:58 0 job proc(s) currently held

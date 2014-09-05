@@ -1,0 +1,4 @@
+BRICK	Filesystem	Size Used Avail	Disk		Use%
+Brick4	10.255.210.102	931G 260G 671G	/dev/sdb1	28
+Brick4	10.255.210.102	931G 615G 317G	/dev/sdc1	67
+Brick68	10.255.210.102	931G 704G 228G	/dev/sdd1	76

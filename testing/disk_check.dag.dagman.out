@@ -1,0 +1,837 @@
+08/29/14 12:10:02 ******************************************************
+08/29/14 12:10:02 ** condor_scheduniv_exec.1107597.0 (CONDOR_DAGMAN) STARTING UP
+08/29/14 12:10:02 ** /usr/bin/condor_dagman
+08/29/14 12:10:02 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+08/29/14 12:10:02 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+08/29/14 12:10:02 ** $CondorVersion: 8.2.2 Aug 07 2014 BuildID: 265643 $
+08/29/14 12:10:02 ** $CondorPlatform: x86_64_RedHat6 $
+08/29/14 12:10:02 ** PID = 664
+08/29/14 12:10:02 ** Log last touched time unavailable (No such file or directory)
+08/29/14 12:10:02 ******************************************************
+08/29/14 12:10:02 Using config source: /etc/condor/condor_config
+08/29/14 12:10:02 Using local config sources: 
+08/29/14 12:10:02    /etc/condor/condor_config.local
+08/29/14 12:10:02 config Macros = 150, Sorted = 150, StringBytes = 3587, TablesBytes = 5448
+08/29/14 12:10:02 CLASSAD_CACHING is ENABLED
+08/29/14 12:10:02 Daemon Log is logging: D_ALWAYS D_ERROR D_COMMAND
+08/29/14 12:10:02 DaemonCore: command socket at <10.255.211.13:49351>
+08/29/14 12:10:02 DaemonCore: private command socket at <10.255.211.13:49351>
+08/29/14 12:10:02 DAGMAN_USE_STRICT setting: 1
+08/29/14 12:10:02 DAGMAN_VERBOSITY setting: 3
+08/29/14 12:10:02 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+08/29/14 12:10:02 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+08/29/14 12:10:02 DAGMAN_SUBMIT_DELAY setting: 0
+08/29/14 12:10:02 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+08/29/14 12:10:02 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+08/29/14 12:10:02 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 1000
+08/29/14 12:10:02 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+08/29/14 12:10:02 DAGMAN_DEFAULT_PRIORITY setting: 0
+08/29/14 12:10:02 DAGMAN_ALWAYS_USE_NODE_LOG setting: True
+08/29/14 12:10:02 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+08/29/14 12:10:02 allow_events (DAGMAN_IGNORE_DUPLICATE_JOB_EXECUTION, DAGMAN_ALLOW_EVENTS) setting: 114
+08/29/14 12:10:02 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+08/29/14 12:10:02 DAGMAN_RETRY_NODE_FIRST setting: False
+08/29/14 12:10:02 DAGMAN_MAX_JOBS_IDLE setting: 0
+08/29/14 12:10:02 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+08/29/14 12:10:02 DAGMAN_MAX_PRE_SCRIPTS setting: 0
+08/29/14 12:10:02 DAGMAN_MAX_POST_SCRIPTS setting: 0
+08/29/14 12:10:02 DAGMAN_ALLOW_LOG_ERROR setting: False
+08/29/14 12:10:02 DAGMAN_MUNGE_NODE_NAMES setting: True
+08/29/14 12:10:02 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+08/29/14 12:10:02 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+08/29/14 12:10:02 DAGMAN_ALWAYS_RUN_POST setting: True
+08/29/14 12:10:02 DAGMAN_ABORT_DUPLICATES setting: True
+08/29/14 12:10:02 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+08/29/14 12:10:02 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+08/29/14 12:10:02 DAGMAN_AUTO_RESCUE setting: True
+08/29/14 12:10:02 DAGMAN_MAX_RESCUE_NUM setting: 100
+08/29/14 12:10:02 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+08/29/14 12:10:02 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+08/29/14 12:10:02 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+08/29/14 12:10:02 DAGMAN_MAX_JOB_HOLDS setting: 100
+08/29/14 12:10:02 DAGMAN_HOLD_CLAIM_TIME setting: 20
+08/29/14 12:10:02 ALL_DEBUG setting: D_COMMAND
+08/29/14 12:10:02 DAGMAN_DEBUG setting: 
+08/29/14 12:10:02 argv[0] == "condor_scheduniv_exec.1107597.0"
+08/29/14 12:10:02 argv[1] == "-Lockfile"
+08/29/14 12:10:02 argv[2] == "disk_check.dag.lock"
+08/29/14 12:10:02 argv[3] == "-AutoRescue"
+08/29/14 12:10:02 argv[4] == "1"
+08/29/14 12:10:02 argv[5] == "-DoRescueFrom"
+08/29/14 12:10:02 argv[6] == "0"
+08/29/14 12:10:02 argv[7] == "-Dag"
+08/29/14 12:10:02 argv[8] == "disk_check.dag"
+08/29/14 12:10:02 argv[9] == "-Suppress_notification"
+08/29/14 12:10:02 argv[10] == "-CsdVersion"
+08/29/14 12:10:02 argv[11] == "$CondorVersion: 8.2.2 Aug 07 2014 BuildID: 265643 $"
+08/29/14 12:10:02 argv[12] == "-Dagman"
+08/29/14 12:10:02 argv[13] == "/usr/bin/condor_dagman"
+08/29/14 12:10:02 Default node log file is: </home/airsageops/testing/./disk_check.dag.nodes.log>
+08/29/14 12:10:02 DAG Lockfile will be written to disk_check.dag.lock
+08/29/14 12:10:02 DAG Input file is disk_check.dag
+08/29/14 12:10:02 Ignoring value of DAGMAN_LOG_ON_NFS_IS_ERROR.
+08/29/14 12:10:02 Parsing 1 dagfiles
+08/29/14 12:10:02 Parsing disk_check.dag ...
+08/29/14 12:10:02 Dag contains 18 total jobs
+08/29/14 12:10:02 Sleeping for 12 seconds to ensure ProcessId uniqueness
+08/29/14 12:10:14 Bootstrapping...
+08/29/14 12:10:14 Number of pre-completed nodes: 0
+08/29/14 12:10:14 Of 18 nodes total:
+08/29/14 12:10:14  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:10:14   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:10:14     0       0        0       0      18          0        0
+08/29/14 12:10:14 0 job proc(s) currently held
+08/29/14 12:10:15 Registering condor_event_timer...
+08/29/14 12:10:16 MultiLogFiles: truncating log file /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Submitting Condor Node number-1 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-1 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-1 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.135/job_10.255.210.135.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107598.
+08/29/14 12:10:16 	assigned Condor ID (1107598.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-2 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-2 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-2 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.147/job_10.255.210.147.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107599.
+08/29/14 12:10:16 	assigned Condor ID (1107599.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-3 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-3 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-3 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.162/job_10.255.210.162.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107600.
+08/29/14 12:10:16 	assigned Condor ID (1107600.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-4 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-4 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-4 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.106/job_10.255.210.106.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107601.
+08/29/14 12:10:16 	assigned Condor ID (1107601.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-5 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-5 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-5 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.156/job_10.255.210.156.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107602.
+08/29/14 12:10:16 	assigned Condor ID (1107602.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-6 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-6 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-6 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.140/job_10.255.210.140.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107603.
+08/29/14 12:10:16 	assigned Condor ID (1107603.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-7 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-7 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-7 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.132/job_10.255.210.132.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107604.
+08/29/14 12:10:16 	assigned Condor ID (1107604.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-8 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-8 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-8 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.127/job_10.255.210.127.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107605.
+08/29/14 12:10:16 	assigned Condor ID (1107605.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-9 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-9 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-9 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.116/job_10.255.210.116.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107606.
+08/29/14 12:10:16 	assigned Condor ID (1107606.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-10 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-10 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-10 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.143/job_10.255.210.143.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107607.
+08/29/14 12:10:16 	assigned Condor ID (1107607.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-11 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-11 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-11 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.105/job_10.255.210.105.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107608.
+08/29/14 12:10:16 	assigned Condor ID (1107608.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-12 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-12 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-12 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.119/job_10.255.210.119.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107609.
+08/29/14 12:10:16 	assigned Condor ID (1107609.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-13 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-13 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-13 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.153/job_10.255.210.153.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107610.
+08/29/14 12:10:16 	assigned Condor ID (1107610.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-14 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-14 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-14 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.144/job_10.255.210.144.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107611.
+08/29/14 12:10:16 	assigned Condor ID (1107611.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-15 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-15 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-15 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.154/job_10.255.210.154.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107612.
+08/29/14 12:10:16 	assigned Condor ID (1107612.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-16 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-16 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-16 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.108/job_10.255.210.108.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107613.
+08/29/14 12:10:16 	assigned Condor ID (1107613.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-17 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-17 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-17 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.124/job_10.255.210.124.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107614.
+08/29/14 12:10:16 	assigned Condor ID (1107614.0.0)
+08/29/14 12:10:16 Submitting Condor Node number-18 job(s)...
+08/29/14 12:10:16 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:10:16 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:10:16 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:10:16 submitting: condor_submit -a dag_node_name' '=' 'number-18 -a +DAGManJobId' '=' '1107597 -a DAGManJobId' '=' '1107597 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-18 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.148/job_10.255.210.148.condor
+08/29/14 12:10:16 From submit: Submitting job(s).
+08/29/14 12:10:16 From submit: 1 job(s) submitted to cluster 1107615.
+08/29/14 12:10:16 	assigned Condor ID (1107615.0.0)
+08/29/14 12:10:16 Just submitted 18 jobs this cycle...
+08/29/14 12:10:16 Currently monitoring 1 Condor log file(s)
+08/29/14 12:10:16 Reassigning the id of job number-1 from (1107598.0.0) to (1107598.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-1 (1107598.0.0)
+08/29/14 12:10:16 Number of idle job procs: 1
+08/29/14 12:10:16 Reassigning the id of job number-2 from (1107599.0.0) to (1107599.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-2 (1107599.0.0)
+08/29/14 12:10:16 Number of idle job procs: 2
+08/29/14 12:10:16 Reassigning the id of job number-3 from (1107600.0.0) to (1107600.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-3 (1107600.0.0)
+08/29/14 12:10:16 Number of idle job procs: 3
+08/29/14 12:10:16 Reassigning the id of job number-4 from (1107601.0.0) to (1107601.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-4 (1107601.0.0)
+08/29/14 12:10:16 Number of idle job procs: 4
+08/29/14 12:10:16 Reassigning the id of job number-5 from (1107602.0.0) to (1107602.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-5 (1107602.0.0)
+08/29/14 12:10:16 Number of idle job procs: 5
+08/29/14 12:10:16 Reassigning the id of job number-6 from (1107603.0.0) to (1107603.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-6 (1107603.0.0)
+08/29/14 12:10:16 Number of idle job procs: 6
+08/29/14 12:10:16 Reassigning the id of job number-7 from (1107604.0.0) to (1107604.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-7 (1107604.0.0)
+08/29/14 12:10:16 Number of idle job procs: 7
+08/29/14 12:10:16 Reassigning the id of job number-8 from (1107605.0.0) to (1107605.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-8 (1107605.0.0)
+08/29/14 12:10:16 Number of idle job procs: 8
+08/29/14 12:10:16 Reassigning the id of job number-9 from (1107606.0.0) to (1107606.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-9 (1107606.0.0)
+08/29/14 12:10:16 Number of idle job procs: 9
+08/29/14 12:10:16 Reassigning the id of job number-10 from (1107607.0.0) to (1107607.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-10 (1107607.0.0)
+08/29/14 12:10:16 Number of idle job procs: 10
+08/29/14 12:10:16 Reassigning the id of job number-11 from (1107608.0.0) to (1107608.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-11 (1107608.0.0)
+08/29/14 12:10:16 Number of idle job procs: 11
+08/29/14 12:10:16 Reassigning the id of job number-12 from (1107609.0.0) to (1107609.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-12 (1107609.0.0)
+08/29/14 12:10:16 Number of idle job procs: 12
+08/29/14 12:10:16 Reassigning the id of job number-13 from (1107610.0.0) to (1107610.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-13 (1107610.0.0)
+08/29/14 12:10:16 Number of idle job procs: 13
+08/29/14 12:10:16 Reassigning the id of job number-14 from (1107611.0.0) to (1107611.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-14 (1107611.0.0)
+08/29/14 12:10:16 Number of idle job procs: 14
+08/29/14 12:10:16 Reassigning the id of job number-15 from (1107612.0.0) to (1107612.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-15 (1107612.0.0)
+08/29/14 12:10:16 Number of idle job procs: 15
+08/29/14 12:10:16 Reassigning the id of job number-16 from (1107613.0.0) to (1107613.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-16 (1107613.0.0)
+08/29/14 12:10:16 Number of idle job procs: 16
+08/29/14 12:10:16 Reassigning the id of job number-17 from (1107614.0.0) to (1107614.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-17 (1107614.0.0)
+08/29/14 12:10:16 Number of idle job procs: 17
+08/29/14 12:10:16 Reassigning the id of job number-18 from (1107615.0.0) to (1107615.0.0)
+08/29/14 12:10:16 Event: ULOG_SUBMIT for Condor Node number-18 (1107615.0.0)
+08/29/14 12:10:16 Number of idle job procs: 18
+08/29/14 12:10:16 Of 18 nodes total:
+08/29/14 12:10:16  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:10:16   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:10:16     0       0       18       0       0          0        0
+08/29/14 12:10:16 0 job proc(s) currently held
+08/29/14 12:10:26 Currently monitoring 1 Condor log file(s)
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-2 (1107599.0.0)
+08/29/14 12:10:26 Number of idle job procs: 17
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-1 (1107598.0.0)
+08/29/14 12:10:26 Number of idle job procs: 16
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-4 (1107601.0.0)
+08/29/14 12:10:26 Number of idle job procs: 15
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-3 (1107600.0.0)
+08/29/14 12:10:26 Number of idle job procs: 14
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-10 (1107607.0.0)
+08/29/14 12:10:26 Number of idle job procs: 13
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-8 (1107605.0.0)
+08/29/14 12:10:26 Number of idle job procs: 12
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-6 (1107603.0.0)
+08/29/14 12:10:26 Number of idle job procs: 11
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-5 (1107602.0.0)
+08/29/14 12:10:26 Number of idle job procs: 10
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-9 (1107606.0.0)
+08/29/14 12:10:26 Number of idle job procs: 9
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-13 (1107610.0.0)
+08/29/14 12:10:26 Number of idle job procs: 8
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-11 (1107608.0.0)
+08/29/14 12:10:26 Number of idle job procs: 7
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-16 (1107613.0.0)
+08/29/14 12:10:26 Number of idle job procs: 6
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-17 (1107614.0.0)
+08/29/14 12:10:26 Number of idle job procs: 5
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-7 (1107604.0.0)
+08/29/14 12:10:26 Number of idle job procs: 4
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-15 (1107612.0.0)
+08/29/14 12:10:26 Number of idle job procs: 3
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-12 (1107609.0.0)
+08/29/14 12:10:26 Number of idle job procs: 2
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-18 (1107615.0.0)
+08/29/14 12:10:26 Number of idle job procs: 1
+08/29/14 12:10:26 Event: ULOG_EXECUTE for Condor Node number-14 (1107611.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-1 (1107598.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-1 job proc (1107598.0.0) completed successfully.
+08/29/14 12:10:26 Node number-1 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-2 (1107599.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-2 job proc (1107599.0.0) completed successfully.
+08/29/14 12:10:26 Node number-2 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-4 (1107601.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-4 job proc (1107601.0.0) completed successfully.
+08/29/14 12:10:26 Node number-4 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-3 (1107600.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-3 job proc (1107600.0.0) completed successfully.
+08/29/14 12:10:26 Node number-3 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-10 (1107607.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-10 job proc (1107607.0.0) completed successfully.
+08/29/14 12:10:26 Node number-10 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-8 (1107605.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-8 job proc (1107605.0.0) completed successfully.
+08/29/14 12:10:26 Node number-8 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-6 (1107603.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-6 job proc (1107603.0.0) completed successfully.
+08/29/14 12:10:26 Node number-6 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-5 (1107602.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-5 job proc (1107602.0.0) completed successfully.
+08/29/14 12:10:26 Node number-5 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-9 (1107606.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-9 job proc (1107606.0.0) completed successfully.
+08/29/14 12:10:26 Node number-9 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-13 (1107610.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-13 job proc (1107610.0.0) completed successfully.
+08/29/14 12:10:26 Node number-13 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-11 (1107608.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-11 job proc (1107608.0.0) completed successfully.
+08/29/14 12:10:26 Node number-11 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-7 (1107604.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-7 job proc (1107604.0.0) completed successfully.
+08/29/14 12:10:26 Node number-7 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-17 (1107614.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-17 job proc (1107614.0.0) completed successfully.
+08/29/14 12:10:26 Node number-17 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-16 (1107613.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-16 job proc (1107613.0.0) completed successfully.
+08/29/14 12:10:26 Node number-16 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-15 (1107612.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-15 job proc (1107612.0.0) completed successfully.
+08/29/14 12:10:26 Node number-15 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-12 (1107609.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-12 job proc (1107609.0.0) completed successfully.
+08/29/14 12:10:26 Node number-12 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-18 (1107615.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-18 job proc (1107615.0.0) completed successfully.
+08/29/14 12:10:26 Node number-18 job completed
+08/29/14 12:10:26 Event: ULOG_JOB_TERMINATED for Condor Node number-14 (1107611.0.0)
+08/29/14 12:10:26 Number of idle job procs: 0
+08/29/14 12:10:26 Node number-14 job proc (1107611.0.0) completed successfully.
+08/29/14 12:10:26 Node number-14 job completed
+08/29/14 12:10:26 Of 18 nodes total:
+08/29/14 12:10:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:10:26   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:10:26    18       0        0       0       0          0        0
+08/29/14 12:10:26 0 job proc(s) currently held
+08/29/14 12:10:26 All jobs Completed!
+08/29/14 12:10:26 Note: 0 total job deferrals because of -MaxJobs limit (0)
+08/29/14 12:10:26 Note: 0 total job deferrals because of -MaxIdle limit (0)
+08/29/14 12:10:26 Note: 0 total job deferrals because of node category throttles
+08/29/14 12:10:26 Note: 0 total PRE script deferrals because of -MaxPre limit (0)
+08/29/14 12:10:26 Note: 0 total POST script deferrals because of -MaxPost limit (0)
+08/29/14 12:10:26 Of 18 nodes total:
+08/29/14 12:10:26  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:10:26   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:10:26    18       0        0       0       0          0        0
+08/29/14 12:10:26 0 job proc(s) currently held
+08/29/14 12:10:26 Wrote metrics file disk_check.dag.metrics.
+08/29/14 12:10:26 Metrics not sent because of PEGASUS_METRICS or CONDOR_DEVELOPERS setting.
+08/29/14 12:10:26 **** condor_scheduniv_exec.1107597.0 (condor_DAGMAN) pid 664 EXITING WITH STATUS 0
+08/29/14 12:24:05 ******************************************************
+08/29/14 12:24:05 ** condor_scheduniv_exec.1107616.0 (CONDOR_DAGMAN) STARTING UP
+08/29/14 12:24:05 ** /usr/bin/condor_dagman
+08/29/14 12:24:05 ** SubsystemInfo: name=DAGMAN type=DAGMAN(10) class=DAEMON(1)
+08/29/14 12:24:05 ** Configuration: subsystem:DAGMAN local:<NONE> class:DAEMON
+08/29/14 12:24:05 ** $CondorVersion: 8.2.2 Aug 07 2014 BuildID: 265643 $
+08/29/14 12:24:05 ** $CondorPlatform: x86_64_RedHat6 $
+08/29/14 12:24:05 ** PID = 1400
+08/29/14 12:24:05 ** Log last touched 8/29 12:10:26
+08/29/14 12:24:05 ******************************************************
+08/29/14 12:24:05 Using config source: /etc/condor/condor_config
+08/29/14 12:24:05 Using local config sources: 
+08/29/14 12:24:05    /etc/condor/condor_config.local
+08/29/14 12:24:05 config Macros = 150, Sorted = 150, StringBytes = 3589, TablesBytes = 5448
+08/29/14 12:24:05 CLASSAD_CACHING is ENABLED
+08/29/14 12:24:05 Daemon Log is logging: D_ALWAYS D_ERROR D_COMMAND
+08/29/14 12:24:05 DaemonCore: command socket at <10.255.211.13:45032>
+08/29/14 12:24:05 DaemonCore: private command socket at <10.255.211.13:45032>
+08/29/14 12:24:05 DAGMAN_USE_STRICT setting: 1
+08/29/14 12:24:05 DAGMAN_VERBOSITY setting: 3
+08/29/14 12:24:05 DAGMAN_DEBUG_CACHE_SIZE setting: 5242880
+08/29/14 12:24:05 DAGMAN_DEBUG_CACHE_ENABLE setting: False
+08/29/14 12:24:05 DAGMAN_SUBMIT_DELAY setting: 0
+08/29/14 12:24:05 DAGMAN_MAX_SUBMIT_ATTEMPTS setting: 6
+08/29/14 12:24:05 DAGMAN_STARTUP_CYCLE_DETECT setting: False
+08/29/14 12:24:05 DAGMAN_MAX_SUBMITS_PER_INTERVAL setting: 1000
+08/29/14 12:24:05 DAGMAN_USER_LOG_SCAN_INTERVAL setting: 5
+08/29/14 12:24:05 DAGMAN_DEFAULT_PRIORITY setting: 0
+08/29/14 12:24:05 DAGMAN_ALWAYS_USE_NODE_LOG setting: True
+08/29/14 12:24:05 DAGMAN_SUPPRESS_NOTIFICATION setting: True
+08/29/14 12:24:05 allow_events (DAGMAN_IGNORE_DUPLICATE_JOB_EXECUTION, DAGMAN_ALLOW_EVENTS) setting: 114
+08/29/14 12:24:05 DAGMAN_RETRY_SUBMIT_FIRST setting: True
+08/29/14 12:24:05 DAGMAN_RETRY_NODE_FIRST setting: False
+08/29/14 12:24:05 DAGMAN_MAX_JOBS_IDLE setting: 0
+08/29/14 12:24:05 DAGMAN_MAX_JOBS_SUBMITTED setting: 0
+08/29/14 12:24:05 DAGMAN_MAX_PRE_SCRIPTS setting: 0
+08/29/14 12:24:05 DAGMAN_MAX_POST_SCRIPTS setting: 0
+08/29/14 12:24:05 DAGMAN_ALLOW_LOG_ERROR setting: False
+08/29/14 12:24:05 DAGMAN_MUNGE_NODE_NAMES setting: True
+08/29/14 12:24:05 DAGMAN_PROHIBIT_MULTI_JOBS setting: False
+08/29/14 12:24:05 DAGMAN_SUBMIT_DEPTH_FIRST setting: False
+08/29/14 12:24:05 DAGMAN_ALWAYS_RUN_POST setting: True
+08/29/14 12:24:05 DAGMAN_ABORT_DUPLICATES setting: True
+08/29/14 12:24:05 DAGMAN_ABORT_ON_SCARY_SUBMIT setting: True
+08/29/14 12:24:05 DAGMAN_PENDING_REPORT_INTERVAL setting: 600
+08/29/14 12:24:05 DAGMAN_AUTO_RESCUE setting: True
+08/29/14 12:24:05 DAGMAN_MAX_RESCUE_NUM setting: 100
+08/29/14 12:24:05 DAGMAN_WRITE_PARTIAL_RESCUE setting: True
+08/29/14 12:24:05 DAGMAN_DEFAULT_NODE_LOG setting: @(DAG_DIR)/@(DAG_FILE).nodes.log
+08/29/14 12:24:05 DAGMAN_GENERATE_SUBDAG_SUBMITS setting: True
+08/29/14 12:24:05 DAGMAN_MAX_JOB_HOLDS setting: 100
+08/29/14 12:24:05 DAGMAN_HOLD_CLAIM_TIME setting: 20
+08/29/14 12:24:05 ALL_DEBUG setting: D_COMMAND
+08/29/14 12:24:05 DAGMAN_DEBUG setting: 
+08/29/14 12:24:05 argv[0] == "condor_scheduniv_exec.1107616.0"
+08/29/14 12:24:05 argv[1] == "-Lockfile"
+08/29/14 12:24:05 argv[2] == "disk_check.dag.lock"
+08/29/14 12:24:05 argv[3] == "-AutoRescue"
+08/29/14 12:24:05 argv[4] == "1"
+08/29/14 12:24:05 argv[5] == "-DoRescueFrom"
+08/29/14 12:24:05 argv[6] == "0"
+08/29/14 12:24:05 argv[7] == "-Dag"
+08/29/14 12:24:05 argv[8] == "disk_check.dag"
+08/29/14 12:24:05 argv[9] == "-Suppress_notification"
+08/29/14 12:24:05 argv[10] == "-CsdVersion"
+08/29/14 12:24:05 argv[11] == "$CondorVersion: 8.2.2 Aug 07 2014 BuildID: 265643 $"
+08/29/14 12:24:05 argv[12] == "-Force"
+08/29/14 12:24:05 argv[13] == "-Dagman"
+08/29/14 12:24:05 argv[14] == "/usr/bin/condor_dagman"
+08/29/14 12:24:05 Default node log file is: </home/airsageops/testing/./disk_check.dag.nodes.log>
+08/29/14 12:24:05 DAG Lockfile will be written to disk_check.dag.lock
+08/29/14 12:24:05 DAG Input file is disk_check.dag
+08/29/14 12:24:05 Ignoring value of DAGMAN_LOG_ON_NFS_IS_ERROR.
+08/29/14 12:24:05 Parsing 1 dagfiles
+08/29/14 12:24:05 Parsing disk_check.dag ...
+08/29/14 12:24:05 Dag contains 18 total jobs
+08/29/14 12:24:05 Sleeping for 12 seconds to ensure ProcessId uniqueness
+08/29/14 12:24:17 Bootstrapping...
+08/29/14 12:24:17 Number of pre-completed nodes: 0
+08/29/14 12:24:17 Of 18 nodes total:
+08/29/14 12:24:17  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:24:17   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:24:17     0       0        0       0      18          0        0
+08/29/14 12:24:17 0 job proc(s) currently held
+08/29/14 12:24:17 Registering condor_event_timer...
+08/29/14 12:24:18 MultiLogFiles: truncating log file /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Submitting Condor Node number-1 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-1 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-1 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.135/job_10.255.210.135.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107617.
+08/29/14 12:24:18 	assigned Condor ID (1107617.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-2 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-2 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-2 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.147/job_10.255.210.147.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107618.
+08/29/14 12:24:18 	assigned Condor ID (1107618.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-3 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-3 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-3 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.162/job_10.255.210.162.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107619.
+08/29/14 12:24:18 	assigned Condor ID (1107619.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-4 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-4 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-4 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.106/job_10.255.210.106.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107620.
+08/29/14 12:24:18 	assigned Condor ID (1107620.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-5 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-5 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-5 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.156/job_10.255.210.156.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107621.
+08/29/14 12:24:18 	assigned Condor ID (1107621.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-6 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-6 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-6 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.140/job_10.255.210.140.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107622.
+08/29/14 12:24:18 	assigned Condor ID (1107622.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-7 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-7 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-7 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.132/job_10.255.210.132.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107623.
+08/29/14 12:24:18 	assigned Condor ID (1107623.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-8 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-8 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-8 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.127/job_10.255.210.127.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107624.
+08/29/14 12:24:18 	assigned Condor ID (1107624.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-9 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-9 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-9 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.116/job_10.255.210.116.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107625.
+08/29/14 12:24:18 	assigned Condor ID (1107625.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-10 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-10 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-10 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.143/job_10.255.210.143.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107626.
+08/29/14 12:24:18 	assigned Condor ID (1107626.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-11 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-11 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-11 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.105/job_10.255.210.105.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107627.
+08/29/14 12:24:18 	assigned Condor ID (1107627.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-12 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-12 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-12 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.119/job_10.255.210.119.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107628.
+08/29/14 12:24:18 	assigned Condor ID (1107628.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-13 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-13 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-13 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.153/job_10.255.210.153.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107629.
+08/29/14 12:24:18 	assigned Condor ID (1107629.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-14 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-14 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-14 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.144/job_10.255.210.144.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107630.
+08/29/14 12:24:18 	assigned Condor ID (1107630.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-15 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-15 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-15 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.154/job_10.255.210.154.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107631.
+08/29/14 12:24:18 	assigned Condor ID (1107631.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-16 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-16 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-16 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.108/job_10.255.210.108.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107632.
+08/29/14 12:24:18 	assigned Condor ID (1107632.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-17 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-17 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-17 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.124/job_10.255.210.124.condor
+08/29/14 12:24:18 From submit: Submitting job(s).
+08/29/14 12:24:18 From submit: 1 job(s) submitted to cluster 1107633.
+08/29/14 12:24:18 	assigned Condor ID (1107633.0.0)
+08/29/14 12:24:18 Submitting Condor Node number-18 job(s)...
+08/29/14 12:24:18 Adding a DAGMan auxiliary log /home/airsageops/testing/./disk_check.dag.nodes.log
+08/29/14 12:24:18 Masking the events recorded in the DAGMAN auxiliary log
+08/29/14 12:24:18 Mask for auxiliary log is 0,1,2,4,5,7,9,10,11,12,13,16,17,24,27
+08/29/14 12:24:18 submitting: condor_submit -a dag_node_name' '=' 'number-18 -a +DAGManJobId' '=' '1107616 -a DAGManJobId' '=' '1107616 -a submit_event_notes' '=' 'DAG' 'Node:' 'number-18 -a dagman_log' '=' '/home/airsageops/testing/./disk_check.dag.nodes.log -a +DAGManNodesMask' '=' '"0,1,2,4,5,7,9,10,11,12,13,16,17,24,27" -a DAG_STATUS' '=' '0 -a FAILED_COUNT' '=' '0 -a +DAGParentNodeNames' '=' '"" -a notification' '=' 'never work/10.255.210.148/job_10.255.210.148.condor
+08/29/14 12:24:19 From submit: Submitting job(s).
+08/29/14 12:24:19 From submit: 1 job(s) submitted to cluster 1107634.
+08/29/14 12:24:19 	assigned Condor ID (1107634.0.0)
+08/29/14 12:24:19 Just submitted 18 jobs this cycle...
+08/29/14 12:24:19 Currently monitoring 1 Condor log file(s)
+08/29/14 12:24:19 Reassigning the id of job number-1 from (1107617.0.0) to (1107617.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-1 (1107617.0.0)
+08/29/14 12:24:19 Number of idle job procs: 1
+08/29/14 12:24:19 Reassigning the id of job number-2 from (1107618.0.0) to (1107618.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-2 (1107618.0.0)
+08/29/14 12:24:19 Number of idle job procs: 2
+08/29/14 12:24:19 Reassigning the id of job number-3 from (1107619.0.0) to (1107619.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-3 (1107619.0.0)
+08/29/14 12:24:19 Number of idle job procs: 3
+08/29/14 12:24:19 Reassigning the id of job number-4 from (1107620.0.0) to (1107620.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-4 (1107620.0.0)
+08/29/14 12:24:19 Number of idle job procs: 4
+08/29/14 12:24:19 Reassigning the id of job number-5 from (1107621.0.0) to (1107621.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-5 (1107621.0.0)
+08/29/14 12:24:19 Number of idle job procs: 5
+08/29/14 12:24:19 Reassigning the id of job number-6 from (1107622.0.0) to (1107622.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-6 (1107622.0.0)
+08/29/14 12:24:19 Number of idle job procs: 6
+08/29/14 12:24:19 Reassigning the id of job number-7 from (1107623.0.0) to (1107623.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-7 (1107623.0.0)
+08/29/14 12:24:19 Number of idle job procs: 7
+08/29/14 12:24:19 Reassigning the id of job number-8 from (1107624.0.0) to (1107624.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-8 (1107624.0.0)
+08/29/14 12:24:19 Number of idle job procs: 8
+08/29/14 12:24:19 Reassigning the id of job number-9 from (1107625.0.0) to (1107625.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-9 (1107625.0.0)
+08/29/14 12:24:19 Number of idle job procs: 9
+08/29/14 12:24:19 Reassigning the id of job number-10 from (1107626.0.0) to (1107626.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-10 (1107626.0.0)
+08/29/14 12:24:19 Number of idle job procs: 10
+08/29/14 12:24:19 Reassigning the id of job number-11 from (1107627.0.0) to (1107627.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-11 (1107627.0.0)
+08/29/14 12:24:19 Number of idle job procs: 11
+08/29/14 12:24:19 Reassigning the id of job number-12 from (1107628.0.0) to (1107628.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-12 (1107628.0.0)
+08/29/14 12:24:19 Number of idle job procs: 12
+08/29/14 12:24:19 Reassigning the id of job number-13 from (1107629.0.0) to (1107629.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-13 (1107629.0.0)
+08/29/14 12:24:19 Number of idle job procs: 13
+08/29/14 12:24:19 Reassigning the id of job number-14 from (1107630.0.0) to (1107630.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-14 (1107630.0.0)
+08/29/14 12:24:19 Number of idle job procs: 14
+08/29/14 12:24:19 Reassigning the id of job number-15 from (1107631.0.0) to (1107631.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-15 (1107631.0.0)
+08/29/14 12:24:19 Number of idle job procs: 15
+08/29/14 12:24:19 Reassigning the id of job number-16 from (1107632.0.0) to (1107632.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-16 (1107632.0.0)
+08/29/14 12:24:19 Number of idle job procs: 16
+08/29/14 12:24:19 Reassigning the id of job number-17 from (1107633.0.0) to (1107633.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-17 (1107633.0.0)
+08/29/14 12:24:19 Number of idle job procs: 17
+08/29/14 12:24:19 Reassigning the id of job number-18 from (1107634.0.0) to (1107634.0.0)
+08/29/14 12:24:19 Event: ULOG_SUBMIT for Condor Node number-18 (1107634.0.0)
+08/29/14 12:24:19 Number of idle job procs: 18
+08/29/14 12:24:19 Of 18 nodes total:
+08/29/14 12:24:19  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:24:19   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:24:19     0       0       18       0       0          0        0
+08/29/14 12:24:19 0 job proc(s) currently held
+08/29/14 12:24:29 Currently monitoring 1 Condor log file(s)
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-1 (1107617.0.0)
+08/29/14 12:24:29 Number of idle job procs: 17
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-4 (1107620.0.0)
+08/29/14 12:24:29 Number of idle job procs: 16
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-2 (1107618.0.0)
+08/29/14 12:24:29 Number of idle job procs: 15
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-6 (1107622.0.0)
+08/29/14 12:24:29 Number of idle job procs: 14
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-3 (1107619.0.0)
+08/29/14 12:24:29 Number of idle job procs: 13
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-5 (1107621.0.0)
+08/29/14 12:24:29 Number of idle job procs: 12
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-8 (1107624.0.0)
+08/29/14 12:24:29 Number of idle job procs: 11
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-14 (1107630.0.0)
+08/29/14 12:24:29 Number of idle job procs: 10
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-7 (1107623.0.0)
+08/29/14 12:24:29 Number of idle job procs: 9
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-17 (1107633.0.0)
+08/29/14 12:24:29 Number of idle job procs: 8
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-16 (1107632.0.0)
+08/29/14 12:24:29 Number of idle job procs: 7
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-12 (1107628.0.0)
+08/29/14 12:24:29 Number of idle job procs: 6
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-9 (1107625.0.0)
+08/29/14 12:24:29 Number of idle job procs: 5
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-13 (1107629.0.0)
+08/29/14 12:24:29 Number of idle job procs: 4
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-18 (1107634.0.0)
+08/29/14 12:24:29 Number of idle job procs: 3
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-15 (1107631.0.0)
+08/29/14 12:24:29 Number of idle job procs: 2
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-11 (1107627.0.0)
+08/29/14 12:24:29 Number of idle job procs: 1
+08/29/14 12:24:29 Event: ULOG_EXECUTE for Condor Node number-10 (1107626.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-1 (1107617.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-1 job proc (1107617.0.0) completed successfully.
+08/29/14 12:24:29 Node number-1 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-2 (1107618.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-2 job proc (1107618.0.0) completed successfully.
+08/29/14 12:24:29 Node number-2 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-4 (1107620.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-4 job proc (1107620.0.0) completed successfully.
+08/29/14 12:24:29 Node number-4 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-6 (1107622.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-6 job proc (1107622.0.0) completed successfully.
+08/29/14 12:24:29 Node number-6 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-3 (1107619.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-3 job proc (1107619.0.0) completed successfully.
+08/29/14 12:24:29 Node number-3 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-5 (1107621.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-5 job proc (1107621.0.0) completed successfully.
+08/29/14 12:24:29 Node number-5 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-8 (1107624.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-8 job proc (1107624.0.0) completed successfully.
+08/29/14 12:24:29 Node number-8 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-14 (1107630.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-14 job proc (1107630.0.0) completed successfully.
+08/29/14 12:24:29 Node number-14 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-7 (1107623.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-7 job proc (1107623.0.0) completed successfully.
+08/29/14 12:24:29 Node number-7 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-17 (1107633.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-17 job proc (1107633.0.0) completed successfully.
+08/29/14 12:24:29 Node number-17 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-16 (1107632.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-16 job proc (1107632.0.0) completed successfully.
+08/29/14 12:24:29 Node number-16 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-12 (1107628.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-12 job proc (1107628.0.0) completed successfully.
+08/29/14 12:24:29 Node number-12 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-9 (1107625.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-9 job proc (1107625.0.0) completed successfully.
+08/29/14 12:24:29 Node number-9 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-13 (1107629.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-13 job proc (1107629.0.0) completed successfully.
+08/29/14 12:24:29 Node number-13 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-18 (1107634.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-18 job proc (1107634.0.0) completed successfully.
+08/29/14 12:24:29 Node number-18 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-15 (1107631.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-15 job proc (1107631.0.0) completed successfully.
+08/29/14 12:24:29 Node number-15 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-11 (1107627.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-11 job proc (1107627.0.0) completed successfully.
+08/29/14 12:24:29 Node number-11 job completed
+08/29/14 12:24:29 Event: ULOG_JOB_TERMINATED for Condor Node number-10 (1107626.0.0)
+08/29/14 12:24:29 Number of idle job procs: 0
+08/29/14 12:24:29 Node number-10 job proc (1107626.0.0) completed successfully.
+08/29/14 12:24:29 Node number-10 job completed
+08/29/14 12:24:29 Of 18 nodes total:
+08/29/14 12:24:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:24:29   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:24:29    18       0        0       0       0          0        0
+08/29/14 12:24:29 0 job proc(s) currently held
+08/29/14 12:24:29 All jobs Completed!
+08/29/14 12:24:29 Note: 0 total job deferrals because of -MaxJobs limit (0)
+08/29/14 12:24:29 Note: 0 total job deferrals because of -MaxIdle limit (0)
+08/29/14 12:24:29 Note: 0 total job deferrals because of node category throttles
+08/29/14 12:24:29 Note: 0 total PRE script deferrals because of -MaxPre limit (0)
+08/29/14 12:24:29 Note: 0 total POST script deferrals because of -MaxPost limit (0)
+08/29/14 12:24:29 Of 18 nodes total:
+08/29/14 12:24:29  Done     Pre   Queued    Post   Ready   Un-Ready   Failed
+08/29/14 12:24:29   ===     ===      ===     ===     ===        ===      ===
+08/29/14 12:24:29    18       0        0       0       0          0        0
+08/29/14 12:24:29 0 job proc(s) currently held
+08/29/14 12:24:29 Wrote metrics file disk_check.dag.metrics.
+08/29/14 12:24:29 Metrics not sent because of PEGASUS_METRICS or CONDOR_DEVELOPERS setting.
+08/29/14 12:24:29 **** condor_scheduniv_exec.1107616.0 (condor_DAGMAN) pid 1400 EXITING WITH STATUS 0

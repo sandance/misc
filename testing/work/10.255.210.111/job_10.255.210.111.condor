@@ -1,7 +1,7 @@
 notification = Error
 notify_user =  nislam@airsage.com
 Executable  =  /home/airsageops/testing/script/disk_check.sh
-Arguments       = /gluster_bricks/dell1/brick1 /gluster_bricks/dell2/brick1 /gluster_bricks/dell2/brick2
+Arguments       = Brick14:/gluster_bricks/dell1/brick1 Brick31:/gluster_bricks/dell2/brick1 Brick95:/gluster_bricks/dell2/brick2
 Universe        = vanilla
 Error           = /home/airsageops/testing/work/10.255.210.111//job-10.255.210.111.err
 Output          = /home/airsageops/testing/work/10.255.210.111//job_10.255.210.111.out
