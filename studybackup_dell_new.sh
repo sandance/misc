@@ -51,7 +51,10 @@ function send_to_SL_and_BB
 	tar --remove-files -cvf ${ticket}.tar  $ticket/  2>&1
 	rsync -r --size-only   --no-p --no-o --no-g --progress  /mnt/glusterfs/$volume/atp/temp/${ticket}.tar rsync://10.255.211.46/ODSTUDIES/ 2>&1
 
-	echo "study ${ticket} has been sent to 211.41"
+	#sycn PDE to 211.27
+	rsync -r --size-only   --no-p --no-o --no-g --progress $pde/	rsync://10.255.211.27:/study/$disk/ 2>&1
+
+	echo "study ${ticket} has been sent to 211.46 and 211.26 and 211.27"
 	rm -rf /mnt/glusterfs/$volume/atp/temp/${ticket}*
 	
 	echo "study deleted"
